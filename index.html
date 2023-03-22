@@ -305,11 +305,11 @@
 						<div class="form-group">
 						  <input type="email" class="form-control px-3 py-4" placeholder="Your Email">
 						</div>
-						<div class="form-group">
+						<div class="form-group" hidden="true">
 						  <input type="email" class="form-control px-3 py-4" placeholder="Your Phone">
 						</div>
-						<div class="form-group mb-5">
-						  <input type="text" class="form-control px-3 py-4" placeholder="Subject" name="subject" value="Message from website">
+						<div class="form-group mb-5" hidden="true">
+						  <input type="text" class="form-control px-3 py-4" placeholder="Subject" name="subject" value="Message from portfolio">
 						  
 						</div>
 						<div class="form-group mb-5">
@@ -374,10 +374,9 @@
 		  event.preventDefault();
 		  const name = document.querySelector('input[type="text"]').value;
 		  const email = document.querySelector('input[type="email"]').value;
-		  const phone = document.querySelectorAll('input[type="email"]')[1].value;
 		  const subject = document.querySelector('input[name="subject"]').value;
 		  const message = document.querySelector('textarea').value;
-		  const mailtoLink = 'mailto:teo.unr.gimenez@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message) + '%0D%0A%0D%0A' + encodeURIComponent(name) + '%0D%0A' + encodeURIComponent(email) + '%0D%0A' + encodeURIComponent(phone);
+		  const mailtoLink = 'mailto:teo.unr.gimenez@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
 		  window.location.href = mailtoLink;
 		});
 	  </script>
